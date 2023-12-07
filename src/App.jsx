@@ -21,7 +21,7 @@ const App = () => {
       <div className='bg-[#141414]'>
       <header>
         <nav>
-          <div className='container mx-auto flex items-center px-40 py-7  justify-between '>
+          <div className='container mx-auto flex items-center  py-7  justify-between '>
         <div>
            <img src={logo} alt="logo" />
         </div>

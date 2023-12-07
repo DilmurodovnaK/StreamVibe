@@ -28,10 +28,10 @@ export function AccordionCustomIcon() {
   return (
     <>
 <div className=" container  mx-auto   ">
-    <div className="  mx-40  flex items-center mt-40 justify-between">
+    <div className=" mx-6   flex items-center mt-40 justify-between">
         <div>
             <h3 className=' leading-[72px] text-[#FFFFFF] text-5xl font-bold'>Frequently Asked Questions</h3>
-        <p className='font-normal text-lg text-[#999999] mb-12 mt-2'>Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about StreamVibe.</p>
+        <p className='font-normal text-lg text-[#999999] mb-12 mt-2'>Got questions? We've got answers! Check out our FAQ section to the most commonStreamVibe.</p>
         </div>
         <div>
              <button className="bg-[#E50000]  text-white   py-4 px-10 rounded ">Ask a Question</button>
@@ -40,7 +40,7 @@ export function AccordionCustomIcon() {
     </div>
 <div className=" container  mx-auto   ">
     
-    <div className="mx-40 flex mt-16 justify-between">
+    <div className="flex mt-16 justify-between">
     <div>
         <div className="flex items-center gap-5">
         <div><button className="p-5  border-[#262626] border-2 text-[#FFF] rounded-lg">01</button></div>
