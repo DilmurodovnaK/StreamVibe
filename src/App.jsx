@@ -1,17 +1,18 @@
 import React from 'react'
 import{BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom';
 import logo from './assets/logo.svg';
-// import facebook from './assets/facebook.svg';
-// import twitter from './assets/twitter.svg';
-// import init from './assets/init.svg';
+import facebook from './assets/facebook.svg';
+import twitter from './assets/twitter.svg';
+import init from './assets/init.svg';
 import search from './assets/search.svg';
 import bell from './assets/bell.svg';
 
 import Home from './pages/Home';
-import Shows from './pages/Shows';
+import Movie from './pages/Movie';
 import Support from './pages/Support';
 import Subscription from './pages/Subscription';
 import NotFound from './pages/NotFound';
+import Search from './components/Search';
 
 
 const App = () => {
@@ -46,7 +47,7 @@ const App = () => {
         </div>
         <div>
        
-<input className='bg-[#141414]' type="search"/>
+<Search/>
 <button className='bg-[#141414]'><img src={search} alt="icon" /></button>
 
 <button className='bg-[#141414] ml-7'><img src={bell} alt="icon" /></button>
@@ -57,14 +58,14 @@ const App = () => {
       </div>
 <Routes>
   <Route path='/' element={<Home/>}/>
-   <Route path='/movies' element={<Shows/>}/>
+   <Route path='/movies' element={<Movie/>}/>
     <Route path='/support' element={<Support/>}/>
      <Route path='/subscription' element={<Subscription/>}/>
        <Route path='*' element={<NotFound/>}/>
 </Routes>
-{/* <div className='bg-[#0F0F0F]'>
+ <div className='bg-[#0F0F0F]'>
 <footer className='container bg-[#0F0F0F] mx-auto'>
-  <div className='pb-12 px-40 pt-24 bg-[#0F0F0F]'>
+  <div className='pb-12 pt-24 bg-[#0F0F0F]'>
 
     <div className=' flex items-start justify-between pb-24 '>
     <ul>
@@ -121,7 +122,7 @@ const App = () => {
    </div>
   </div>
   </footer>
-  </div> */}
+  </div> 
     </Router>
     </>
   )

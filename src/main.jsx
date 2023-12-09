@@ -7,8 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from "@material-tailwind/react";
 import './assets/global.css';
 
-import Home from './pages/Home.jsx';
-import Shows from './pages/Shows.jsx';
+
 
 
 
