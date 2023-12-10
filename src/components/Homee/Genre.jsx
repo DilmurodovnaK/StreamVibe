@@ -2,6 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import left from './img/left.svg';
 import right from './img/right.svg';
+import { NavLink, Routes, Route } from "react-router-dom";
+import Singlepage from "../Shows/Singlepage";
+import Home from "../../pages/Home";
 
 const Genre = () => {
   const [data, setData] = useState([]);
@@ -61,7 +64,7 @@ const Genre = () => {
       </div>
       <div className="flex flex-wrap justify-center mb-24">
         {displayedData.map((movie) => (
-          <div key={movie.id} className="max-w-sm mx-2 my-4 overflow-hidden border gap-7 bg-[#1A1A1A] border-[#262626] p-7 rounded-lg shadow-lg">
+          <NavLink key={movie.id} to={`/movie/${movie.id}`} className="max-w-sm mx-2 my-4 overflow-hidden border gap-7 bg-[#1A1A1A] border-[#262626] p-7 rounded-lg shadow-lg">
             <img
               className="w-[265px] h-[281px] bg-cover "
               src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.backdrop_path}`}
@@ -72,9 +75,12 @@ const Genre = () => {
               <p className="text-[#999999] text-base">Release Date: {movie.release_date}</p>
               <p className="text-[#999999] text-base">Vote Average: {movie.vote_average}</p>
             </div>
-          </div>
+          </NavLink>
         ))}
       </div>
+      <Routes>
+        <Route path="*" element={<Singlepage/>} />
+      </Routes>
     </div>
   );
 };

@@ -10,12 +10,17 @@ import Trending2 from '../components/Shows/Trending2';
 import Releases2 from '../components/Shows/Releases2';
 import Watch2 from '../components/Shows/Watch2';
 import Trial from '../components/Trial'
+import Headerh from '../containers/Headerh';
+
+
 
 
 const Movie = () => {
   return (
   <>
   <div>
+<Headerh/>
+  
   <Genre/>
   <Popular/>
   <Trending/>

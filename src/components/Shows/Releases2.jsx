@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import left from '../Homee/img/left.svg';
 import right from '../Homee/img/right.svg';
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import Singlepage from "./Singlepage";
 
 const Releases2 = () => {
   const [data, setData] = useState([]);
@@ -47,7 +49,7 @@ const Releases2 = () => {
           <h3 className="text-[#FFF] text-4xl">New Released Shows</h3>
         </div>
         <div>
-          {startIndex > -5 && (
+          {startIndex > 0 && (
             <button
               className="bg-[#1F1F1F] hover:bg-[#1A1A1A] mr-4 text-white font-bold py-2 px-4 rounded"
               onClick={handleReturnToFirstSlice}
@@ -66,27 +68,27 @@ const Releases2 = () => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center mb-24">
-{displayedData.map((movie) => (
-  <div key={movie.id} className="max-w-[250px] mx-2 my-4 overflow-hidden border gap-7 bg-[#1A1A1A]  border-[#262626] p-5 rounded-lg shadow-lg">
-    <img
-      className="w-[200px] h-[250px] bg-cover items-center"
-      src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.backdrop_path}`}
-      alt={`Backdrop of ${movie.original_title}`}
-    />
-    <div className="px-6 py-4">
-      <p className="text-[#999999] ">
-        
-        {movie.title || movie.name}
-      </p>
-       <p className="text-[#999999] ">
-        Vote_average:
-{movie.vote_average
-}
-      </p>
-    </div>
-  </div>
-))}
+        {displayedData.map((movie) => (
+          <NavLink key={movie.id} to={`/movie/${movie.id}`} className="max-w-[250px] mx-2 my-4 overflow-hidden border gap-7 bg-[#1A1A1A] border-[#262626] p-5 rounded-lg">
+            <img
+              className="w-[200px] h-[250px] bg-cover items-center"
+              src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.backdrop_path}`}
+              alt={`Backdrop of ${movie.original_title}`}
+            />
+            <div className="px-6 py-4">
+              <p className="text-[#999999] ">
+                {movie.title || movie.name}
+              </p>
+              <p className="text-[#999999] ">
+                Vote_average: {movie.vote_average}
+              </p>
+            </div>
+          </NavLink>
+        ))}
       </div>
+      <Routes>
+        <Route path="*" element={<Singlepage/>} />
+      </Routes>
     </div>
   );
 };

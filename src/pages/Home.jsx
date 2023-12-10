@@ -4,12 +4,13 @@ import Card2 from '../components/Card2'
 import { Accordion } from '@material-tailwind/react'
 import Plan from '../components/Plan'
 import Trial from '../components/Trial'
-import Genre from '../components/Homee/Genre'
+
+import Watch2 from '../components/Shows/Watch2'
 const Home = () => {
   return (
    <>
    <Headerh/>
-   <Genre/>
+  <Watch2/>
    <Card2/>
    <Accordion/>
    <Plan/>

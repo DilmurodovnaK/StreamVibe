@@ -4,7 +4,8 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
- 
+
+
 function Icon({ id, open }) {
   return (
     <svg
@@ -44,7 +45,7 @@ export function AccordionCustomIcon() {
     <div>
         <div className="flex items-center gap-5">
         <div><button className="p-5  border-[#262626] border-2 text-[#FFF] rounded-lg">01</button></div>
-      <Accordion className="w-[600px] p-8" open={open === 1} icon={<Icon id={1} open={open} />}>
+      <Accordion className="w-[600px] p-8"  open={open === 1} icon={<Icon id={1} open={open} />}>
        <AccordionHeader className="text-[#FFF] text-xl border-b-[#E50000] hover:text-red-900" onClick={() => handleOpen(1)}>What is StreamVibe??</AccordionHeader>
         <AccordionBody className='text-[#999]'>
         StreamVibe is a streaming service that allows you to watch movies and shows on demand.
@@ -87,7 +88,7 @@ export function AccordionCustomIcon() {
         <div className="flex items-center gap-5">
         <div><button className="p-5  border-[#262626] border-2 text-[#FFF] rounded-lg">05</button></div>
       <Accordion className="w-[600px] p-8" open={open === 5} icon={<Icon id={5} open={open} />}>
-       <AccordionHeader className="text-[#FFF] text-xl border-b-[#E50000] hover:text-red-900" onClick={() => handleOpen(1)}>How do I sign up for StreamVibe?</AccordionHeader>
+       <AccordionHeader className="text-[#FFF] text-xl border-b-[#E50000] hover:text-red-900" onClick={() => handleOpen(5)}>How do I sign up for StreamVibe?</AccordionHeader>
         <AccordionBody className='text-[#999]'>
         StreamVibe is a streaming service that allows you to watch movies and shows on demand.
         </AccordionBody>

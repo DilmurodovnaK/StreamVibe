@@ -12,7 +12,8 @@ import Movie from './pages/Movie';
 import Support from './pages/Support';
 import Subscription from './pages/Subscription';
 import NotFound from './pages/NotFound';
-import Search from './components/Search';
+import Singlepage from './components/Shows/Singlepage';
+
 
 
 const App = () => {
@@ -47,7 +48,7 @@ const App = () => {
         </div>
         <div>
        
-<Search/>
+
 <button className='bg-[#141414]'><img src={search} alt="icon" /></button>
 
 <button className='bg-[#141414] ml-7'><img src={bell} alt="icon" /></button>
@@ -58,9 +59,11 @@ const App = () => {
       </div>
 <Routes>
   <Route path='/' element={<Home/>}/>
-   <Route path='/movies' element={<Movie/>}/>
+   <Route path='/movies/*' element={<Movie/>}/>
     <Route path='/support' element={<Support/>}/>
      <Route path='/subscription' element={<Subscription/>}/>
+       <Route path='*' element={<Singlepage/>}/>
+     
        <Route path='*' element={<NotFound/>}/>
 </Routes>
  <div className='bg-[#0F0F0F]'>

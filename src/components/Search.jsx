@@ -41,23 +41,24 @@ const Search = () => {
 
   return (
     <div>
-      <div>
-        <input
+      <div >
+        <input 
           type="search"
           placeholder="Search something..."
-          className="w-40 border px-3 py-2"
+          className="w-64 border px-5 py-3 text-[#999999] bg-[#0F0F0F] rounded-xl border-[#1F1F1F]"
           onChange={handleSearch}
           value={searchText}
         />
       </div>
       <main>
         {data && data.length > 0 ? (
-          <div className="grid grid-cols-4">
+          <div className="container mx-auto grid grid-cols-5 gap gap-10 ">
             {data.map((movie) => (
-              <div key={movie.id}>
+              <div key={movie.id} className="max-w-[250px]  justify-center mb-24 flex flex-wrap mx-2 my-4 overflow-hidden border gap-7 text-[#999999] bg-[#1A1A1A]  border-[#262626] p-5 rounded-lg shadow-lg">
+                <h3>Movie Name:</h3>
                 {movie.original_title}
                 <img
-                  src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.backdrop_path}`}
+                  src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.backdrop_path} || https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path} `}
                   alt=""
                 />
               </div>
