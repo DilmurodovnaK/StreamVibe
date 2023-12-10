@@ -6,12 +6,14 @@ import Plan from '../components/Plan'
 import Trial from '../components/Trial'
 
 import Watch2 from '../components/Shows/Watch2'
+import { AccordionCustomIcon } from '../components/Accordion'
 const Home = () => {
   return (
    <>
    <Headerh/>
   <Watch2/>
    <Card2/>
+    <AccordionCustomIcon/>
    <Accordion/>
    <Plan/>
    <Trial/>

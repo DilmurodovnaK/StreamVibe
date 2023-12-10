@@ -19,7 +19,7 @@ const Movie = () => {
   return (
   <>
   <div>
- \
+ 
 <Headerh/>
   
   <Genre/>

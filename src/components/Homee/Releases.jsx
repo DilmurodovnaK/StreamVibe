@@ -65,7 +65,7 @@ const Releases = () => {
           )}
         </div>
       </div>
-      <div className="flex flex-wrap justify-center mb-24">
+      <div className="flex flex-wrap justify-center ">
         {displayedData.map((movie) => (
           <div key={movie.id} className="max-w-[250px] mx-2 my-4 overflow-hidden border gap-7 bg-[#1A1A1A]  border-[#262626] p-5 rounded-lg">
             <img
