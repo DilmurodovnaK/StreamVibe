@@ -19,7 +19,7 @@ const Movie = () => {
   return (
   <>
   <div>
-  <div>
+ \
 <Headerh/>
   
   <Genre/>
@@ -35,7 +35,7 @@ const Movie = () => {
     <Watch2/>
     <Trial/>
   </div>
-</div>
+
 
   </>
   )
