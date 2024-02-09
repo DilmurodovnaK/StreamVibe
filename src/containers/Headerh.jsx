@@ -1,6 +1,7 @@
 import React from 'react';
 import play from '../assets/play.svg';
 import Search from '../components/Search';
+
 const Headerh = () => {
   return (
   <>
@@ -15,6 +16,7 @@ const Headerh = () => {
 <button className='flex items-center justify-evenly w-[250px] rounded-lg gap-1 py-4 px-6 bg-[#E50000] text-[#FFF]'><img src={play} alt="icon" />Start Watching Now</button>
 </div>
   </div>
+
   </>
   )
 }

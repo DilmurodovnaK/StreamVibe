@@ -18,8 +18,8 @@ module.exports = withMT({
 
             },
             backgroundImage: {
-                'home': "url('./assets/home.jpg')",
-                'post': "url('./assets/post.png')",
+                'home': "url('./assets/home2.jpg')",
+                'post': "url('./assets/post2.png')",
                 'movie': "url('./assets/shows.png')"
             }
         },

@@ -1,5 +1,5 @@
 import React from 'react';
-import support1 from '../assets/support1.png';
+import support1 from '../assets/support2.png';
 
 const MainS = () => {
   return (
